@@ -1,4 +1,4 @@
-# app.py
+# pages/1_Big_Whammy_Table.py
 import streamlit as st
 import pandas as pd
 

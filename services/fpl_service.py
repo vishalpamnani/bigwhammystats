@@ -50,18 +50,29 @@ def fetch_entry_event_picks(entry_id: int, gw: int) -> Dict[str, Any]:
 
 def compute_net_points(entry_event: Dict[str, Any]):
     """
-    Returns a dict with net_points, minus_points, raw_points.
-    FPL API: entry_history["points"] is NET (after hits).
+    Compute raw, minus and net points for an entry's GW event.
+
+    Note: different FPL endpoints / payloads can be inconsistent in whether
+    'entry_history["points"]' is raw or net. For your league data the API
+    sends the RAW points in `entry_history["points"]`, and the hits are
+    in `entry_history["event_transfers_cost"]`.
+
+    So we interpret:
+      RawPoints  = entry_history["points"]
+      MinusPoints = event_transfers_cost (positive number)
+      NetPoints  = RawPoints - MinusPoints
+
+    This function intentionally returns integers and is defensive against
+    missing fields.
     """
     hist = entry_event.get("entry_history", {}) or {}
-    net_points = int(hist.get("points", 0))                 # after hits
-    minus_points = int(hist.get("event_transfers_cost", 0)) # positive
-    raw_points = net_points + minus_points                  # before hits
+    # Treat `points` as RAW points (before hits)
+    raw_points = int(hist.get("points", 0))
+    minus_points = int(hist.get("event_transfers_cost", 0))  # positive
+    net_points = raw_points - minus_points
 
     return {
-        "net_points": net_points,
-        "minus_points": minus_points,
         "raw_points": raw_points,
+        "minus_points": minus_points,
+        "net_points": net_points,
     }
-
-

@@ -1,4 +1,4 @@
-# pages/awards.py  (replace your managers-fetch with this)
+# pages/2_Gameweek_Slammers.py  (replace your managers-fetch with this)
 import streamlit as st
 import pandas as pd
 import requests
