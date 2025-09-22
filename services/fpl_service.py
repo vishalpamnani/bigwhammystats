@@ -87,3 +87,4 @@ def compute_net_points(entry_event: Dict[str, Any]):
         "minus_points": minus_points,
         "net_points": net_points,
     }
+# temp change to force redeploy
