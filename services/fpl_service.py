@@ -7,6 +7,17 @@ import streamlit as st
 # Adjust TTL if needed (seconds). Lower during development, higher in production.
 CACHE_TTL = 600  # 10 minutes
 
+@st.cache_data(ttl=300, show_spinner=False)
+def fetch_bootstrap_static() -> Dict[str, Any]:
+    """
+    Fetches the FPL bootstrap-static payload (events, teams, elements, etc.).
+    We'll use the 'events' list to determine which GWs are finished.
+    """
+    url = "https://fantasy.premierleague.com/api/bootstrap-static/"
+    r = requests.get(url, timeout=30)
+    r.raise_for_status()
+    return r.json()
+
 # -------- League / standings (handles pagination to fetch >50 entries) --------
 @st.cache_data(ttl=CACHE_TTL, show_spinner=False)
 def fetch_all_league_standings(league_id: int) -> List[Dict[str, Any]]:
