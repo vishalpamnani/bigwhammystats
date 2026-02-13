@@ -2,6 +2,27 @@
 import requests
 from typing import Dict, List, Any, Tuple
 import streamlit as st
+import time
+from requests.exceptions import ReadTimeout, ConnectionError, HTTPError
+
+def safe_request(url: str, timeout: int = 20, retries: int = 3, sleep_time: int = 2):
+    """
+    Production-safe request wrapper for the FPL API.
+    Retries + backoff + graceful failure.
+    """
+    for attempt in range(retries):
+        try:
+            r = requests.get(url, timeout=timeout)
+            r.raise_for_status()
+            return r.json()
+
+        except (ReadTimeout, ConnectionError, HTTPError) as e:
+            if attempt == retries - 1:
+                # Last attempt failed → don't crash app
+                print(f"⚠️ FPL API failed for {url}")
+                return {}
+            time.sleep(sleep_time)
+
 
 # --- CONFIG ---
 # Adjust TTL if needed (seconds). Lower during development, higher in production.
@@ -14,9 +35,7 @@ def fetch_bootstrap_static() -> Dict[str, Any]:
     We'll use the 'events' list to determine which GWs are finished.
     """
     url = "https://fantasy.premierleague.com/api/bootstrap-static/"
-    r = requests.get(url, timeout=30)
-    r.raise_for_status()
-    return r.json()
+    return safe_request(url)
 
 # -------- League / standings (handles pagination to fetch >50 entries) --------
 @st.cache_data(ttl=CACHE_TTL, show_spinner=False)
@@ -29,9 +48,9 @@ def fetch_all_league_standings(league_id: int) -> List[Dict[str, Any]]:
     page = 1
     while True:
         url = f"https://fantasy.premierleague.com/api/leagues-classic/{league_id}/standings/?page_standings={page}"
-        r = requests.get(url, timeout=30)
-        r.raise_for_status()
-        data = r.json()
+        data = safe_request(url)
+        if not data:
+            break
         page_results = data.get("standings", {}).get("results", [])
         results.extend(page_results)
         has_next = data.get("standings", {}).get("has_next", False)
@@ -48,6 +67,39 @@ def standings_index_by_entry(league_id: int) -> Dict[int, Dict[str, Any]]:
     items = fetch_all_league_standings(league_id)
     return {row["entry"]: row for row in items}
 
+@st.cache_data(ttl=CACHE_TTL, show_spinner=False)
+def fetch_league_standings_for_gw(league_id: int, gw: int) -> List[Dict[str, Any]]:
+    """
+    Fetch league standings snapshot for a specific GW.
+    Uses safe_request + pagination + backoff.
+    """
+    results: List[Dict[str, Any]] = []
+    page = 1
+
+    while True:
+        url = (
+            f"https://fantasy.premierleague.com/api/leagues-classic/"
+            f"{league_id}/standings/?page_standings={page}&event_standings={gw}"
+        )
+
+        data = safe_request(url)
+
+        # API failed → stop gracefully (don't corrupt data)
+        if not data:
+            break
+
+        page_results = data.get("standings", {}).get("results", [])
+        results.extend(page_results)
+
+        has_next = data.get("standings", {}).get("has_next", False)
+        if not has_next:
+            break
+
+        page += 1
+        time.sleep(1)  # rate limit
+
+    return results
+
 # -------- GW picks / points for a single entry --------
 @st.cache_data(ttl=CACHE_TTL, show_spinner=False)
 def fetch_entry_event_picks(entry_id: int, gw: int) -> Dict[str, Any]:
@@ -55,9 +107,7 @@ def fetch_entry_event_picks(entry_id: int, gw: int) -> Dict[str, Any]:
     Raw event data for an entry for GW (includes entry_history: points, event_transfers_cost, etc.)
     """
     url = f"https://fantasy.premierleague.com/api/entry/{entry_id}/event/{gw}/picks/"
-    r = requests.get(url, timeout=30)
-    r.raise_for_status()
-    return r.json()
+    return safe_request(url)
 
 def compute_net_points(entry_event: Dict[str, Any]):
     """
