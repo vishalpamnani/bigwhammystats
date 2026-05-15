@@ -12,6 +12,7 @@ from services.fpl_service import (
 )
 from services.lps import elimination_schedule, coin_toss_seeded
 from utils import add_logo_fixed
+from config import LEAGUE_ID
 
 # ---------- CONFIG ----------
 st.set_page_config(page_title="Last Person Standing", layout="wide")
@@ -19,8 +20,6 @@ try:
     add_logo_fixed("TBWlogo.png", width=120, top=20, left=16)
 except Exception:
     pass
-
-LEAGUE_ID = 1124151  # replace with your league ID
 
 st.title("🪓 Last Person Standing")
 

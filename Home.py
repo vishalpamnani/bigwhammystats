@@ -7,12 +7,11 @@ from zoneinfo import ZoneInfo
 from services.fpl_service import fetch_all_league_standings, fetch_bootstrap_static
 from services.lps import elimination_schedule
 from utils import add_logo_fixed
+from config import LEAGUE_ID
 
 st.set_page_config(page_title="Big Whammy - Home", layout="wide")
 
 add_logo_fixed("TBWlogo.png", width=120, top=20, left=16)
-
-LEAGUE_ID = 1124151
 
 st.title("🏡 Welcome to The Big Whammy!")
 

@@ -4,14 +4,13 @@ import pandas as pd
 
 from services.fpl_service import fetch_all_league_standings
 from utils import add_logo_fixed
+from config import LEAGUE_ID
 
 
 # --- CONFIG ---
 st.set_page_config(page_title="Big Whammy Dashboard", layout="wide")
 
 add_logo_fixed("TBWlogo.png", width=120, top=20, left=16)
-
-LEAGUE_ID = 1124151  # <-- replace with your actual league id
 
 st.title("📊 Big Whammy League Standings")
 

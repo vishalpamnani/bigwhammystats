@@ -109,6 +109,17 @@ def fetch_entry_event_picks(entry_id: int, gw: int) -> Dict[str, Any]:
     url = f"https://fantasy.premierleague.com/api/entry/{entry_id}/event/{gw}/picks/"
     return safe_request(url)
 
+
+@st.cache_data(ttl=CACHE_TTL, show_spinner=False)
+def fetch_entry_history(entry_id: int) -> Dict[str, Any]:
+    """
+    Fetches an entry's season history. The `current` list contains each GW's
+    cumulative official FPL `total_points`, which is what the classic mini
+    league table is based on after that GW.
+    """
+    url = f"https://fantasy.premierleague.com/api/entry/{entry_id}/history/"
+    return safe_request(url)
+
 def compute_net_points(entry_event: Dict[str, Any]):
     """
     Compute raw, minus and net points for an entry's GW event.

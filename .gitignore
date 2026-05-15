@@ -191,6 +191,10 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+# Big Whammy local snapshots
+data/*.sqlite3
+data/*.sqlite3-*
+
 # PyPI configuration file
 .pypirc
 
