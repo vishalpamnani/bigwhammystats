@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Optional
 
 import streamlit as st
 
-from config import ARTICLES_DIR
+ARTICLES_DIR = Path(__file__).resolve().parent.parent / "articles"
 
 
 @dataclass(frozen=True)
