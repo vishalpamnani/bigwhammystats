@@ -25,6 +25,12 @@ class Article:
     tags: List[str]
     summary: str
     cover_image: str
+    getty_id: str
+    getty_token: str
+    getty_sig: str
+    getty_width: int
+    getty_height: int
+    getty_caption: str
     featured: bool
     body: str
     path: Path
@@ -93,6 +99,12 @@ def _article_from_file(path: Path) -> Article:
         tags=_parse_tags(meta.get("tags")),
         summary=str(meta.get("summary") or ""),
         cover_image=str(meta.get("cover_image") or ""),
+        getty_id=str(meta.get("getty_id") or ""),
+        getty_token=str(meta.get("getty_token") or ""),
+        getty_sig=str(meta.get("getty_sig") or ""),
+        getty_width=int(meta.get("getty_width") or 594),
+        getty_height=int(meta.get("getty_height") or 396),
+        getty_caption=str(meta.get("getty_caption") or "true").lower(),
         featured=bool(meta.get("featured") or False),
         body=body,
         path=path,
@@ -164,6 +176,15 @@ def resolve_article_asset(article: Article, asset_path: str) -> Optional[Path]:
 
 def render_cover_image(article: Article) -> None:
     if not article.cover_image:
+        if article.getty_id:
+            _render_getty_embed(
+                image_id=article.getty_id,
+                token=article.getty_token,
+                signature=article.getty_sig,
+                width=article.getty_width,
+                height=article.getty_height,
+                caption=article.getty_caption,
+            )
         return
     if re.match(r"^https?://", article.cover_image):
         st.image(article.cover_image, use_container_width=True)
@@ -189,17 +210,28 @@ def _parse_shortcode_attrs(raw_attrs: str) -> Dict[str, str]:
 
 def _render_getty_shortcode(raw_attrs: str) -> None:
     attrs = _parse_shortcode_attrs(raw_attrs)
-    image_id = attrs.get("id", "").strip()
-    token = attrs.get("token", "").strip()
-    signature = attrs.get("sig", "").strip()
-    caption = attrs.get("caption", "true").strip().lower()
+    _render_getty_embed(
+        image_id=attrs.get("id", "").strip(),
+        token=attrs.get("token", "").strip(),
+        signature=attrs.get("sig", "").strip(),
+        width=int(attrs.get("width", "594") or 594),
+        height=int(attrs.get("height", "396") or 396),
+        caption=attrs.get("caption", "true").strip().lower(),
+    )
 
+
+def _render_getty_embed(
+    image_id: str,
+    token: str,
+    signature: str,
+    width: int = 594,
+    height: int = 396,
+    caption: str = "true",
+) -> None:
     if not image_id or not token or not signature:
         st.warning("Getty embed is missing required details.")
         return
 
-    width = int(attrs.get("width", "594") or 594)
-    height = int(attrs.get("height", "396") or 396)
     iframe_url = (
         f"https://embed.gettyimages.com/embed/{html.escape(image_id)}"
         f"?et={html.escape(token)}"

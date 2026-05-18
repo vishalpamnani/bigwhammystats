@@ -8,10 +8,14 @@ category: "Football Stories"
 tags: ["Arsenal", "Mikel Arteta", "Premier League"]
 summary: "Arsenal are two games away from a long-awaited Premier League title. For Mikel Arteta, the next 10 days could define both the season and his time at the club."
 cover_image: ""
+getty_id: "2275483486"
+getty_token: "wurnjHXqSq51pbApzOyt5w"
+getty_sig: "WJGX6oGkLLKyA7QrK6ua8VquHrRwMXA07bk6dDtuRgc="
+getty_width: "594"
+getty_height: "396"
+getty_caption: "true"
 featured: true
 ---
-
-{{ getty id="2275483486" token="wurnjHXqSq51pbApzOyt5w" sig="WJGX6oGkLLKyA7QrK6ua8VquHrRwMXA07bk6dDtuRgc=" width="594" height="396" caption="true" }}
 
 As we approach the climax of a thrilling Premier League season, Arsenal find themselves in the midst of yet another heated title race.
 
