@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo
 
 from services.fpl_service import fetch_all_league_standings, fetch_bootstrap_static
 from services.lps import elimination_schedule
+from services.articles import article_url, format_article_date, load_articles
 from utils import add_logo_fixed
 from config import LEAGUE_ID
 
@@ -81,8 +82,21 @@ try:
 except Exception:
     st.write("**Next Deadline:** unavailable.")
 
+# --- Latest Articles ---
+articles = load_articles()
+if articles:
+    st.subheader("📝 Latest Articles")
+    for article in articles[:3]:
+        with st.container(border=True):
+            st.markdown(f"### [{article.title}]({article_url(article.slug)})")
+            st.caption(
+                f"{format_article_date(article)} · {article.author} · {article.category}"
+            )
+            if article.summary:
+                st.write(article.summary)
+
 # Navigation buttons
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 with col1:
     if st.button("🏅 Gameweek Slammers"):
         st.switch_page("pages/2_Gameweek_Slammers.py")
@@ -92,3 +106,6 @@ with col2:
 with col3:
     if st.button("💀 Last Person Standing"):
         st.switch_page("pages/3_Last_Person_Standing.py")
+with col4:
+    if st.button("📝 Articles"):
+        st.switch_page("pages/5_Articles.py")
