@@ -8,8 +8,10 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 ARTICLES_DIR = Path(__file__).resolve().parent.parent / "articles"
+GETTY_SHORTCODE_RE = re.compile(r"\{\{\s*getty\s+([^}]+)\}\}")
 
 
 @dataclass(frozen=True)
@@ -178,6 +180,65 @@ def _image_to_data_uri(path: Path) -> str:
     return f"data:{mime_type};base64,{encoded}"
 
 
+def _parse_shortcode_attrs(raw_attrs: str) -> Dict[str, str]:
+    attrs: Dict[str, str] = {}
+    for key, value in re.findall(r"(\w+)=\"([^\"]*)\"", raw_attrs):
+        attrs[key] = value
+    return attrs
+
+
+def _render_getty_shortcode(raw_attrs: str) -> None:
+    attrs = _parse_shortcode_attrs(raw_attrs)
+    image_id = attrs.get("id", "").strip()
+    token = attrs.get("token", "").strip()
+    signature = attrs.get("sig", "").strip()
+    caption = attrs.get("caption", "true").strip().lower()
+
+    if not image_id or not token or not signature:
+        st.warning("Getty embed is missing required details.")
+        return
+
+    width = int(attrs.get("width", "594") or 594)
+    height = int(attrs.get("height", "396") or 396)
+    iframe_url = (
+        f"https://embed.gettyimages.com/embed/{html.escape(image_id)}"
+        f"?et={html.escape(token)}"
+        f"&tld=com"
+        f"&sig={html.escape(signature)}"
+        f"&caption={caption}"
+        f"&ver=1"
+    )
+    aspect_padding = (height / width) * 100
+    component_height = height + 34
+
+    components.html(
+        f"""
+        <div class="getty embed image"
+             style="background-color:#fff;display:block;font-family:Arial,sans-serif;color:#777;font-size:11px;width:100%;max-width:{width}px;margin:0 0 1rem 0;">
+            <div style="padding:0;margin:0 0 4px 0;text-align:left;">
+                <a href="https://www.gettyimages.com/detail/{html.escape(image_id)}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   style="color:#777;text-decoration:none;font-weight:normal;border:none;display:inline-block;">
+                    Embed from Getty Images
+                </a>
+            </div>
+            <div style="overflow:hidden;position:relative;height:0;padding:{aspect_padding:.5f}% 0 0 0;width:100%;">
+                <iframe src="{iframe_url}"
+                        scrolling="no"
+                        frameborder="0"
+                        width="{width}"
+                        height="{height}"
+                        style="display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;margin:0;"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        """,
+        height=component_height,
+    )
+
+
 def render_article_body(article: Article) -> None:
     def replace_image(match: re.Match[str]) -> str:
         alt_text = match.group(1)
@@ -196,4 +257,15 @@ def render_article_body(article: Article) -> None:
         )
 
     body = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", replace_image, article.body)
-    st.markdown(body, unsafe_allow_html=True)
+    cursor = 0
+
+    for match in GETTY_SHORTCODE_RE.finditer(body):
+        preceding_text = body[cursor:match.start()].strip()
+        if preceding_text:
+            st.markdown(preceding_text, unsafe_allow_html=True)
+        _render_getty_shortcode(match.group(1))
+        cursor = match.end()
+
+    remaining_text = body[cursor:].strip()
+    if remaining_text:
+        st.markdown(remaining_text, unsafe_allow_html=True)

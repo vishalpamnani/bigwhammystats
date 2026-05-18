@@ -11,6 +11,8 @@ cover_image: ""
 featured: true
 ---
 
+{{ getty id="2275483486" token="wurnjHXqSq51pbApzOyt5w" sig="WJGX6oGkLLKyA7QrK6ua8VquHrRwMXA07bk6dDtuRgc=" width="594" height="396" caption="true" }}
+
 As we approach the climax of a thrilling Premier League season, Arsenal find themselves in the midst of yet another heated title race.
 
 However, this time around, Mikel Arteta's men are closer than ever to claiming a first league title in more than 20 years. The North Londoners have finished second for the last three seasons, losing out to Manchester City and Liverpool in the process, but are now just two games away from that elusive triumph.
