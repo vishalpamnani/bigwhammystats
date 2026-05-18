@@ -12,6 +12,7 @@ import streamlit.components.v1 as components
 
 ARTICLES_DIR = Path(__file__).resolve().parent.parent / "articles"
 GETTY_SHORTCODE_RE = re.compile(r"\{\{\s*getty\s+([^}]+)\}\}")
+ARTICLE_SHARE_VERSION = "20260518-2"
 
 
 @dataclass(frozen=True)
@@ -143,7 +144,7 @@ def find_article(slug: str, include_drafts: bool = False) -> Optional[Article]:
 
 
 def article_url(slug: str) -> str:
-    return f"/Articles?slug={slug}"
+    return f"/Articles?slug={slug}&v={ARTICLE_SHARE_VERSION}"
 
 
 def format_article_date(article: Article) -> str:
