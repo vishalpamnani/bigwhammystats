@@ -66,3 +66,4 @@ def sort_key_for_bottom_cut(
 # NOTE on goals scored/conceded tie-breakers:
 # We skip them for now because they require per-player live stats aggregation.
 # If ties remain after minus_points, we fall back to deterministic coin toss.
+# redeploy trigger
