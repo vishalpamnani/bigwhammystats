@@ -2,19 +2,43 @@
 from typing import Dict, List, Any, Tuple
 import random
 
-# --- Elimination schedule as provided ---
+LPS_STARTERS = 96
+
+
 def elimination_schedule(gw: int) -> int:
+    """
+    LPS schedule for 96 starters.
+
+    After GW36 there are 3 managers left. GW37 decides Third Last Person
+    Standing, GW38 decides Second Last Person Standing, and the final survivor
+    is the winner.
+    """
     if gw == 1:
         return 0
     if 2 <= gw <= 6:
         return 2
     if 7 <= gw <= 27:
         return 3
-    if 28 <= gw <= 35:
+    if 28 <= gw <= 32:
         return 2
-    if 36 <= gw <= 38:
+    if gw == 33:
+        return 3
+    if gw == 34:
+        return 3
+    if gw == 35:
+        return 3
+    if gw == 36:
+        return 1
+    if gw == 37:
+        return 1
+    if gw == 38:
         return 1
     return 0
+
+
+def participants_left_after_gw(gw: int, starters: int = LPS_STARTERS) -> int:
+    eliminations = sum(elimination_schedule(item) for item in range(1, gw + 1))
+    return max(0, starters - eliminations)
 
 def coin_toss_seeded(items: List[Any], gw: int) -> List[Any]:
     """

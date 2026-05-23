@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 from services.fpl_service import fetch_all_league_standings, fetch_bootstrap_static
-from services.lps import elimination_schedule
+from services.lps import elimination_schedule, participants_left_after_gw
 from services.articles import article_url, format_article_date, load_articles
 from utils import add_logo_fixed
 from config import LEAGUE_ID
@@ -47,6 +47,29 @@ if next_gw <= 38 and elimination_schedule(next_gw) > 0:
 else:
     st.write("**LPS Schedule:** No eliminations scheduled.")
 
+with st.expander("View full LPS elimination schedule"):
+    def lps_remaining_label(gw: int) -> str:
+        remaining = participants_left_after_gw(gw)
+        if gw == 36:
+            return f"{remaining} - 🥉 Third Last Person Standing race"
+        if gw == 37:
+            return f"{remaining} - 🥈 Second Last Person Standing race"
+        if gw == 38:
+            return f"{remaining} - 🥇 Last Person Standing"
+        return str(remaining)
+
+    schedule_df = pd.DataFrame(
+        [
+            {
+                "Gameweek": f"GW {gw}",
+                "Eliminations": elimination_schedule(gw),
+                "Participants Left": lps_remaining_label(gw),
+            }
+            for gw in range(1, 39)
+        ]
+    )
+    st.dataframe(schedule_df, use_container_width=True, hide_index=True)
+
 # --- Next Deadline (IST) ---
 try:
     next_event = None
@@ -82,6 +105,30 @@ try:
 except Exception:
     st.write("**Next Deadline:** unavailable.")
 
+# Navigation buttons
+st.subheader("Explore")
+col1, col2, col3 = st.columns(3)
+with col1:
+    if st.button("📊 Standings", use_container_width=True):
+        st.switch_page("pages/1_Big_Whammy_Table.py")
+with col2:
+    if st.button("🏅 Gameweek Slammers", use_container_width=True):
+        st.switch_page("pages/2_Gameweek_Slammers.py")
+with col3:
+    if st.button("💀 Last Person Standing", use_container_width=True):
+        st.switch_page("pages/3_Last_Person_Standing.py")
+
+col4, col5, col6 = st.columns(3)
+with col4:
+    if st.button("💪 Iron Man", use_container_width=True):
+        st.switch_page("pages/4_Iron_Man.py")
+with col5:
+    if st.button("🃏 Wildcard Wizard", use_container_width=True):
+        st.switch_page("pages/5_Wildcard_Wizard.py")
+with col6:
+    if st.button("🚀 Late Surge", use_container_width=True):
+        st.switch_page("pages/6_Late_Surge.py")
+
 # --- Latest Articles ---
 articles = load_articles()
 if articles:
@@ -94,18 +141,3 @@ if articles:
             )
             if article.summary:
                 st.write(article.summary)
-
-# Navigation buttons
-col1, col2, col3, col4 = st.columns(4)
-with col1:
-    if st.button("🏅 Gameweek Slammers"):
-        st.switch_page("pages/2_Gameweek_Slammers.py")
-with col2:
-    if st.button("📊 Standings"):
-        st.switch_page("pages/1_Big_Whammy_Table.py")
-with col3:
-    if st.button("💀 Last Person Standing"):
-        st.switch_page("pages/3_Last_Person_Standing.py")
-with col4:
-    if st.button("📝 Articles"):
-        st.switch_page("pages/5_Articles.py")
