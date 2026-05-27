@@ -59,3 +59,5 @@ st.markdown(
 **Tie Rule:** If multiple managers finish with the same winning net score, the prize pot is split.
 """
 )
+
+# redeploy trigger

@@ -97,3 +97,5 @@ st.markdown(
 **Note:** WC means Whammy Coins. This ledger is locked from final season award results.
 """
 )
+
+# redeploy trigger

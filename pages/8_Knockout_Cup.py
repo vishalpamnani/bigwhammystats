@@ -41,3 +41,5 @@ st.markdown(
 **Second and Third Runner-up:** Losing semi-finalists are ranked by their semi-final points.
 """
 )
+
+# redeploy trigger
