@@ -27,12 +27,16 @@ with st.spinner("Fetching league summary…"):
 
 st.subheader("📊 League Summary")
 st.write(f"**Total Managers:** {len(standings)}")
-st.write(f"**Current Leader:** {standings[0]['player_name']} ({standings[0]['entry_name']})")
-st.write(f"**Leader Points:** {standings[0]['total']}")
 
 # --- LPS schedule summary ---
 bs = fetch_bootstrap_static()
 events = bs.get("events", []) or []
+season_finished = max((event.get("id", 0) for event in events if event.get("finished")), default=0) >= 38
+
+leader_label = "Winner" if season_finished else "Current Leader"
+points_label = "Winning Points" if season_finished else "Leader Points"
+st.write(f"**{leader_label}:** {standings[0]['player_name']} ({standings[0]['entry_name']})")
+st.write(f"**{points_label}:** {standings[0]['total']}")
 
 # find next GW with eliminations (after latest completed GW)
 now_utc = datetime.now(timezone.utc)
@@ -128,6 +132,17 @@ with col5:
 with col6:
     if st.button("🚀 Late Surge", use_container_width=True):
         st.switch_page("pages/6_Late_Surge.py")
+
+col7, col8, _ = st.columns(3)
+with col7:
+    if st.button("🏔️ Everest Award", use_container_width=True):
+        st.switch_page("pages/7_Everest_Award.py")
+with col8:
+    if st.button("🏆 Knockout Cup", use_container_width=True):
+        st.switch_page("pages/8_Knockout_Cup.py")
+
+if st.button("🏦 Winners' Tally", use_container_width=True):
+    st.switch_page("pages/9_Winners_Tally.py")
 
 # --- Latest Articles ---
 articles = load_articles()

@@ -8,6 +8,8 @@ from services.fpl_service import (
     fetch_all_league_standings,
     fetch_entry_event_picks,
     fetch_entry_history,
+    fetch_h2h_matches,
+    fetch_league_cup_status,
 )
 
 LATE_SURGE_GWS = list(range(34, 39))
@@ -137,3 +139,130 @@ def late_surge_table(league_id: int, latest_completed_gw: int) -> pd.DataFrame:
         ascending=[False, False, True],
     ).reset_index(drop=True)
     return _position_rows(df, ["Total Points", "Highest Single GW"])
+
+
+@st.cache_data(ttl=600, show_spinner=False)
+def everest_rows(league_id: int, latest_completed_gw: int) -> List[Dict[str, Any]]:
+    standings = fetch_all_league_standings(league_id)
+    rows: List[Dict[str, Any]] = []
+
+    for manager in standings:
+        entry_id = int(manager["entry"])
+        entry_history = fetch_entry_history(entry_id)
+        chip_gws = {
+            int(chip["event"])
+            for chip in entry_history.get("chips", []) or []
+            if chip.get("event") is not None
+        }
+
+        for gw_row in entry_history.get("current", []) or []:
+            gw = int(gw_row.get("event", 0))
+            if not 1 <= gw <= min(38, latest_completed_gw):
+                continue
+            if gw in chip_gws:
+                continue
+
+            raw_points = int(gw_row.get("points", 0))
+            minus_points = int(gw_row.get("event_transfers_cost", 0))
+            rows.append(
+                {
+                    "Manager": manager.get("player_name", ""),
+                    "Team": manager.get("entry_name", ""),
+                    "Gameweek": f"GW{gw}",
+                    "Points": raw_points,
+                    "Minus Points": minus_points,
+                    "Net Points": raw_points - minus_points,
+                }
+            )
+
+    return rows
+
+
+def everest_table(league_id: int, latest_completed_gw: int) -> pd.DataFrame:
+    rows = everest_rows(league_id, latest_completed_gw)
+    if not rows:
+        return pd.DataFrame()
+
+    df = pd.DataFrame(rows).sort_values(
+        by=["Net Points", "Points", "Gameweek", "Manager"],
+        ascending=[False, False, True, True],
+    ).reset_index(drop=True)
+    return _position_rows(df, ["Net Points"])
+
+
+def _match_participant(match: Dict[str, Any], side: int) -> Dict[str, Any]:
+    return {
+        "entry": int(match.get(f"entry_{side}_entry") or 0),
+        "Manager": match.get(f"entry_{side}_player_name", ""),
+        "Team": match.get(f"entry_{side}_name", ""),
+        "Points": int(match.get(f"entry_{side}_points") or 0),
+    }
+
+
+def _winner_and_loser(match: Dict[str, Any]) -> tuple[Dict[str, Any], Dict[str, Any]]:
+    entry_1 = _match_participant(match, 1)
+    entry_2 = _match_participant(match, 2)
+    winner_entry = int(match.get("winner") or 0)
+
+    if winner_entry == entry_1["entry"]:
+        return entry_1, entry_2
+    return entry_2, entry_1
+
+
+@st.cache_data(ttl=600, show_spinner=False)
+def knockout_cup_rows(league_id: int) -> List[Dict[str, Any]]:
+    cup_status = fetch_league_cup_status(league_id)
+    cup_league_id = cup_status.get("league")
+    if not cup_league_id:
+        return []
+
+    final_matches = fetch_h2h_matches(int(cup_league_id), event=38)
+    semifinal_matches = fetch_h2h_matches(int(cup_league_id), event=37)
+    if not final_matches:
+        return []
+
+    final_match = final_matches[0]
+    winner, runner_up = _winner_and_loser(final_match)
+    rows = [
+        {
+            "Award": "Winner",
+            "Manager": winner["Manager"],
+            "Team": winner["Team"],
+            "Gameweek": f"GW{final_match.get('event')}",
+            "Points": winner["Points"],
+        },
+        {
+            "Award": "Runner-up",
+            "Manager": runner_up["Manager"],
+            "Team": runner_up["Team"],
+            "Gameweek": f"GW{final_match.get('event')}",
+            "Points": runner_up["Points"],
+        },
+    ]
+
+    semifinal_losers = []
+    for match in semifinal_matches:
+        if (match.get("knockout_name") or "").lower() != "semi-final":
+            continue
+        _, loser = _winner_and_loser(match)
+        loser["Gameweek"] = f"GW{match.get('event')}"
+        semifinal_losers.append(loser)
+
+    semifinal_losers = sorted(
+        semifinal_losers,
+        key=lambda item: (-item["Points"], item["Manager"]),
+    )
+
+    runner_up_labels = ["Second Runner-up", "Third Runner-up"]
+    for index, loser in enumerate(semifinal_losers[:2]):
+        rows.append(
+            {
+                "Award": runner_up_labels[index],
+                "Manager": loser["Manager"],
+                "Team": loser["Team"],
+                "Gameweek": loser["Gameweek"],
+                "Points": loser["Points"],
+            }
+        )
+
+    return rows

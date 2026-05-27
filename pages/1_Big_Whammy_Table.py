@@ -14,6 +14,18 @@ add_logo_fixed("TBWlogo.png", width=120, top=20, left=16)
 
 st.title("📊 Big Whammy League Standings")
 
+
+def season_award(rank: int) -> str:
+    awards = {
+        1: "🥇 Manager of the Season",
+        2: "🥈 2nd Place",
+        3: "🥉 3rd Place",
+        4: "4th Place",
+        5: "Europa 1",
+        6: "Europa 2",
+    }
+    return awards.get(rank, "")
+
 # Fetch all league standings (all pages)
 with st.spinner("Loading full league standings…"):
     standings = fetch_all_league_standings(LEAGUE_ID)
@@ -21,6 +33,7 @@ with st.spinner("Loading full league standings…"):
 # Build DataFrame
 df = pd.DataFrame([{
     "Overall Rank": m["rank"],
+    "Award": season_award(int(m["rank"])),
     "Manager": m["player_name"],
     "Team": m["entry_name"],
     "Overall Points": m["total"]

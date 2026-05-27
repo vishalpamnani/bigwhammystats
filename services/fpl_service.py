@@ -100,6 +100,41 @@ def fetch_league_standings_for_gw(league_id: int, gw: int) -> List[Dict[str, Any
 
     return results
 
+
+@st.cache_data(ttl=CACHE_TTL, show_spinner=False)
+def fetch_league_cup_status(league_id: int) -> Dict[str, Any]:
+    """
+    Returns FPL's cup status for a classic league, including the generated
+    knockout cup league id.
+    """
+    url = f"https://fantasy.premierleague.com/api/league/{league_id}/cup-status/"
+    return safe_request(url)
+
+
+@st.cache_data(ttl=CACHE_TTL, show_spinner=False)
+def fetch_h2h_matches(league_id: int, event: int | None = None) -> List[Dict[str, Any]]:
+    """
+    Returns all H2H/cup matches for a generated cup league.
+    """
+    results: List[Dict[str, Any]] = []
+    page = 1
+
+    while True:
+        url = f"https://fantasy.premierleague.com/api/leagues-h2h-matches/league/{league_id}/?page={page}"
+        if event is not None:
+            url += f"&event={event}"
+
+        data = safe_request(url)
+        if not data:
+            break
+
+        results.extend(data.get("results", []) or [])
+        if not data.get("has_next", False):
+            break
+        page += 1
+
+    return results
+
 # -------- GW picks / points for a single entry --------
 @st.cache_data(ttl=CACHE_TTL, show_spinner=False)
 def fetch_entry_event_picks(entry_id: int, gw: int) -> Dict[str, Any]:

@@ -1,0 +1,1468 @@
+{
+  "season": "2025-26",
+  "currency": "WC",
+  "generated_at": "2026-05-27T17:38:36.711964+00:00",
+  "league_id": 1124151,
+  "entries": [
+    {
+      "manager": "Prathap Devadiga",
+      "team": "Waka waka 11",
+      "manager_team": "Prathap Devadiga - Waka waka 11",
+      "award": "Manager of the Season",
+      "detail": "Final Big Whammy rank 1 with 2367 points",
+      "position": "Winner",
+      "wc": 15000,
+      "source": "Overall Standings"
+    },
+    {
+      "manager": "George T Cherian",
+      "team": "Whatsinaname",
+      "manager_team": "George T Cherian - Whatsinaname",
+      "award": "2nd Place",
+      "detail": "Final Big Whammy rank 2 with 2353 points",
+      "position": "Second",
+      "wc": 8000,
+      "source": "Overall Standings"
+    },
+    {
+      "manager": "Denver Dmello",
+      "team": "General Tao",
+      "manager_team": "Denver Dmello - General Tao",
+      "award": "3rd Place",
+      "detail": "Final Big Whammy rank 3 with 2330 points",
+      "position": "Third",
+      "wc": 6000,
+      "source": "Overall Standings"
+    },
+    {
+      "manager": "Sai Praneeth",
+      "team": "Power Reijnders",
+      "manager_team": "Sai Praneeth - Power Reijnders",
+      "award": "4th Place",
+      "detail": "Final Big Whammy rank 4 with 2325 points",
+      "position": "Fourth",
+      "wc": 4000,
+      "source": "Overall Standings"
+    },
+    {
+      "manager": "Aravind G",
+      "team": "RED DEVIL",
+      "manager_team": "Aravind G - RED DEVIL",
+      "award": "Europa 1",
+      "detail": "Final Big Whammy rank 5 with 2324 points",
+      "position": "Fifth",
+      "wc": 3500,
+      "source": "Overall Standings"
+    },
+    {
+      "manager": "Vikram Gupta",
+      "team": "Let It Rip",
+      "manager_team": "Vikram Gupta - Let It Rip",
+      "award": "Europa 2",
+      "detail": "Final Big Whammy rank 6 with 2323 points",
+      "position": "Sixth",
+      "wc": 3000,
+      "source": "Overall Standings"
+    },
+    {
+      "manager": "Neeraj Mhatre",
+      "team": "Rice To The Occasion",
+      "manager_team": "Neeraj Mhatre - Rice To The Occasion",
+      "award": "Diogo Jota Tribute Award",
+      "detail": "Final Big Whammy rank 20",
+      "position": "#20 Finish",
+      "wc": 3000,
+      "source": "Overall Standings"
+    },
+    {
+      "manager": "Zubin Sheriar",
+      "team": "The Real Deal",
+      "manager_team": "Zubin Sheriar - The Real Deal",
+      "award": "Gameweek Slammer GW1",
+      "detail": "87 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Tarun Bhatia",
+      "team": "Change Name",
+      "manager_team": "Tarun Bhatia - Change Name",
+      "award": "Second Slammer GW1",
+      "detail": "82 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Satyajeet Naik nimbalkar",
+      "team": "FcFalcons52",
+      "manager_team": "Satyajeet Naik nimbalkar - FcFalcons52",
+      "award": "Third Slammer GW1",
+      "detail": "79 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Tushar Munnoli",
+      "team": "Jao Peldo",
+      "manager_team": "Tushar Munnoli - Jao Peldo",
+      "award": "Gameweek Slammer GW2",
+      "detail": "82 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Ronnie Riet",
+      "team": "FC bal op 't dak",
+      "manager_team": "Ronnie Riet - FC bal op 't dak",
+      "award": "Second Slammer GW2",
+      "detail": "76 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Omejo Alukkal",
+      "team": "Koa FC",
+      "manager_team": "Omejo Alukkal - Koa FC",
+      "award": "Third Slammer GW2",
+      "detail": "74 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Ashwath Ash",
+      "team": "Champions",
+      "manager_team": "Ashwath Ash - Champions",
+      "award": "Third Slammer GW2",
+      "detail": "74 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Tushar Munnoli",
+      "team": "Jao Peldo",
+      "manager_team": "Tushar Munnoli - Jao Peldo",
+      "award": "Gameweek Slammer GW3",
+      "detail": "70 net points",
+      "position": "Joint Winner",
+      "wc": 1450,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Neeraj Mhatre",
+      "team": "Rice To The Occasion",
+      "manager_team": "Neeraj Mhatre - Rice To The Occasion",
+      "award": "Gameweek Slammer GW3",
+      "detail": "70 net points",
+      "position": "Joint Winner",
+      "wc": 1450,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Prateek Pathare",
+      "team": "Manutd_1690",
+      "manager_team": "Prateek Pathare - Manutd_1690",
+      "award": "Third Slammer GW3",
+      "detail": "69 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Jubhillyn Carey",
+      "team": "AYEW OK????",
+      "manager_team": "Jubhillyn Carey - AYEW OK????",
+      "award": "Gameweek Slammer GW4",
+      "detail": "95 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Adi tya",
+      "team": "Gyökayo Saka",
+      "manager_team": "Adi tya - Gyökayo Saka",
+      "award": "Second Slammer GW4",
+      "detail": "90 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Harshwardhan Thite",
+      "team": "Fc 302",
+      "manager_team": "Harshwardhan Thite - Fc 302",
+      "award": "Third Slammer GW4",
+      "detail": "87 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Archan Pradhan",
+      "team": "It's Not Working",
+      "manager_team": "Archan Pradhan - It's Not Working",
+      "award": "Gameweek Slammer GW5",
+      "detail": "73 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "meghan pradhan",
+      "team": "MojoRojo",
+      "manager_team": "meghan pradhan - MojoRojo",
+      "award": "Second Slammer GW5",
+      "detail": "72 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Atirath Panigrahi",
+      "team": "The Cardinals",
+      "manager_team": "Atirath Panigrahi - The Cardinals",
+      "award": "Third Slammer GW5",
+      "detail": "67 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "George T Cherian",
+      "team": "Whatsinaname",
+      "manager_team": "George T Cherian - Whatsinaname",
+      "award": "Gameweek Slammer GW6",
+      "detail": "88 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Jibin Varghese",
+      "team": "FC Kochin",
+      "manager_team": "Jibin Varghese - FC Kochin",
+      "award": "Second Slammer GW6",
+      "detail": "87 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Manas K",
+      "team": "Gomu Gomu XI",
+      "manager_team": "Manas K - Gomu Gomu XI",
+      "award": "Third Slammer GW6",
+      "detail": "81 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Tushar Munnoli",
+      "team": "Jao Peldo",
+      "manager_team": "Tushar Munnoli - Jao Peldo",
+      "award": "Gameweek Slammer GW7",
+      "detail": "96 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Jibin Varghese",
+      "team": "FC Kochin",
+      "manager_team": "Jibin Varghese - FC Kochin",
+      "award": "Second Slammer GW7",
+      "detail": "90 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Ronnie Riet",
+      "team": "FC bal op 't dak",
+      "manager_team": "Ronnie Riet - FC bal op 't dak",
+      "award": "Third Slammer GW7",
+      "detail": "89 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "shaun prim",
+      "team": "RedFury",
+      "manager_team": "shaun prim - RedFury",
+      "award": "Third Slammer GW7",
+      "detail": "89 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rohith Varma",
+      "team": "Zulu's XI",
+      "manager_team": "Rohith Varma - Zulu's XI",
+      "award": "Gameweek Slammer GW8",
+      "detail": "95 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Adi tya",
+      "team": "Gyökayo Saka",
+      "manager_team": "Adi tya - Gyökayo Saka",
+      "award": "Second Slammer GW8",
+      "detail": "90 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Neeraj Mhatre",
+      "team": "Rice To The Occasion",
+      "manager_team": "Neeraj Mhatre - Rice To The Occasion",
+      "award": "Second Slammer GW8",
+      "detail": "90 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Jason Kurien",
+      "team": "Jasonators",
+      "manager_team": "Jason Kurien - Jasonators",
+      "award": "Gameweek Slammer GW9",
+      "detail": "77 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Carlton Lobo",
+      "team": "Ha'Cunha Paratha",
+      "manager_team": "Carlton Lobo - Ha'Cunha Paratha",
+      "award": "Second Slammer GW9",
+      "detail": "72 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Harshwardhan Thite",
+      "team": "Fc 302",
+      "manager_team": "Harshwardhan Thite - Fc 302",
+      "award": "Second Slammer GW9",
+      "detail": "72 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Aravind G",
+      "team": "RED DEVIL",
+      "manager_team": "Aravind G - RED DEVIL",
+      "award": "Gameweek Slammer GW10",
+      "detail": "90 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rishi Deka",
+      "team": "Scalpels&Stitches",
+      "manager_team": "Rishi Deka - Scalpels&Stitches",
+      "award": "Second Slammer GW10",
+      "detail": "89 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Himansh Reddy",
+      "team": "Үлкен рақмет",
+      "manager_team": "Himansh Reddy - Үлкен рақмет",
+      "award": "Second Slammer GW10",
+      "detail": "89 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Denver Dmello",
+      "team": "General Tao",
+      "manager_team": "Denver Dmello - General Tao",
+      "award": "Gameweek Slammer GW11",
+      "detail": "67 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Shawn Barry",
+      "team": "FAB 11",
+      "manager_team": "Shawn Barry - FAB 11",
+      "award": "Second Slammer GW11",
+      "detail": "62 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "ARUN CHERIAN",
+      "team": "Phoenix",
+      "manager_team": "ARUN CHERIAN - Phoenix",
+      "award": "Third Slammer GW11",
+      "detail": "61 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "SUDEEP MENON",
+      "team": "FC VADA PAV",
+      "manager_team": "SUDEEP MENON - FC VADA PAV",
+      "award": "Gameweek Slammer GW12",
+      "detail": "69 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Aravind G",
+      "team": "RED DEVIL",
+      "manager_team": "Aravind G - RED DEVIL",
+      "award": "Second Slammer GW12",
+      "detail": "65 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Archan Pradhan",
+      "team": "It's Not Working",
+      "manager_team": "Archan Pradhan - It's Not Working",
+      "award": "Second Slammer GW12",
+      "detail": "65 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Prathap Devadiga",
+      "team": "Waka waka 11",
+      "manager_team": "Prathap Devadiga - Waka waka 11",
+      "award": "Gameweek Slammer GW13",
+      "detail": "79 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "George T Cherian",
+      "team": "Whatsinaname",
+      "manager_team": "George T Cherian - Whatsinaname",
+      "award": "Second Slammer GW13",
+      "detail": "76 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Atirath Panigrahi",
+      "team": "The Cardinals",
+      "manager_team": "Atirath Panigrahi - The Cardinals",
+      "award": "Second Slammer GW13",
+      "detail": "76 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Arghya Brata Mandal",
+      "team": "Arghya's Anteaters A",
+      "manager_team": "Arghya Brata Mandal - Arghya's Anteaters A",
+      "award": "Gameweek Slammer GW14",
+      "detail": "94 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Manu Nigam",
+      "team": "21 Guns",
+      "manager_team": "Manu Nigam - 21 Guns",
+      "award": "Second Slammer GW14",
+      "detail": "89 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Carlton Lobo",
+      "team": "Ha'Cunha Paratha",
+      "manager_team": "Carlton Lobo - Ha'Cunha Paratha",
+      "award": "Third Slammer GW14",
+      "detail": "87 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Ralph Andrade",
+      "team": "redshift",
+      "manager_team": "Ralph Andrade - redshift",
+      "award": "Third Slammer GW14",
+      "detail": "87 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Amr Sandhu",
+      "team": "SandhuFC",
+      "manager_team": "Amr Sandhu - SandhuFC",
+      "award": "Gameweek Slammer GW15",
+      "detail": "82 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "cherian mathan",
+      "team": "Magwire Ballandor",
+      "manager_team": "cherian mathan - Magwire Ballandor",
+      "award": "Second Slammer GW15",
+      "detail": "79 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rishi Deka",
+      "team": "Scalpels&Stitches",
+      "manager_team": "Rishi Deka - Scalpels&Stitches",
+      "award": "Third Slammer GW15",
+      "detail": "78 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Callum Persaud",
+      "team": "FPLTEST1",
+      "manager_team": "Callum Persaud - FPLTEST1",
+      "award": "Third Slammer GW15",
+      "detail": "78 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Nadeem Shaikh",
+      "team": "RAYAN FC",
+      "manager_team": "Nadeem Shaikh - RAYAN FC",
+      "award": "Gameweek Slammer GW16",
+      "detail": "106 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Nevin Samuel",
+      "team": "ViktorGunners14",
+      "manager_team": "Nevin Samuel - ViktorGunners14",
+      "award": "Second Slammer GW16",
+      "detail": "104 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rohit Kokane",
+      "team": "RoRedDevils XI",
+      "manager_team": "Rohit Kokane - RoRedDevils XI",
+      "award": "Third Slammer GW16",
+      "detail": "100 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Joshua Rego",
+      "team": "Hotdoganymayo",
+      "manager_team": "Joshua Rego - Hotdoganymayo",
+      "award": "Gameweek Slammer GW17",
+      "detail": "99 net points",
+      "position": "Joint Winner",
+      "wc": 1450,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Cyrus Bamji",
+      "team": "cylus11",
+      "manager_team": "Cyrus Bamji - cylus11",
+      "award": "Gameweek Slammer GW17",
+      "detail": "99 net points",
+      "position": "Joint Winner",
+      "wc": 1450,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Prathap Devadiga",
+      "team": "Waka waka 11",
+      "manager_team": "Prathap Devadiga - Waka waka 11",
+      "award": "Third Slammer GW17",
+      "detail": "98 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Amr Sandhu",
+      "team": "SandhuFC",
+      "manager_team": "Amr Sandhu - SandhuFC",
+      "award": "Gameweek Slammer GW18",
+      "detail": "84 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Denver Dmello",
+      "team": "General Tao",
+      "manager_team": "Denver Dmello - General Tao",
+      "award": "Second Slammer GW18",
+      "detail": "78 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "ROHIT RAJAN",
+      "team": "WolfPack",
+      "manager_team": "ROHIT RAJAN - WolfPack",
+      "award": "Third Slammer GW18",
+      "detail": "72 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Thomas Reji Ponnuran",
+      "team": "Arsenal4Life",
+      "manager_team": "Thomas Reji Ponnuran - Arsenal4Life",
+      "award": "Gameweek Slammer GW19",
+      "detail": "61 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Tushar Munnoli",
+      "team": "Jao Peldo",
+      "manager_team": "Tushar Munnoli - Jao Peldo",
+      "award": "Second Slammer GW19",
+      "detail": "56 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Omejo Alukkal",
+      "team": "Koa FC",
+      "manager_team": "Omejo Alukkal - Koa FC",
+      "award": "Second Slammer GW19",
+      "detail": "56 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Joshua Rego",
+      "team": "Hotdoganymayo",
+      "manager_team": "Joshua Rego - Hotdoganymayo",
+      "award": "Gameweek Slammer GW20",
+      "detail": "74 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Anubhab Dasgupta",
+      "team": "Delapidated",
+      "manager_team": "Anubhab Dasgupta - Delapidated",
+      "award": "Second Slammer GW20",
+      "detail": "70 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Carlton Lobo",
+      "team": "Ha'Cunha Paratha",
+      "manager_team": "Carlton Lobo - Ha'Cunha Paratha",
+      "award": "Third Slammer GW20",
+      "detail": "68 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Prateek Pathare",
+      "team": "Manutd_1690",
+      "manager_team": "Prateek Pathare - Manutd_1690",
+      "award": "Third Slammer GW20",
+      "detail": "68 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rejin Varghese",
+      "team": "The Boys In Blue",
+      "manager_team": "Rejin Varghese - The Boys In Blue",
+      "award": "Gameweek Slammer GW21",
+      "detail": "81 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Vishal Pamnani",
+      "team": "Cole’d and Dangerous",
+      "manager_team": "Vishal Pamnani - Cole’d and Dangerous",
+      "award": "Second Slammer GW21",
+      "detail": "74 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Aahas Cherian John",
+      "team": "What I've Done",
+      "manager_team": "Aahas Cherian John - What I've Done",
+      "award": "Third Slammer GW21",
+      "detail": "73 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Harshwardhan Thite",
+      "team": "Fc 302",
+      "manager_team": "Harshwardhan Thite - Fc 302",
+      "award": "Gameweek Slammer GW22",
+      "detail": "68 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rajat Rai",
+      "team": "krooscontrol",
+      "manager_team": "Rajat Rai - krooscontrol",
+      "award": "Second Slammer GW22",
+      "detail": "59 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Zubin Sheriar",
+      "team": "The Real Deal",
+      "manager_team": "Zubin Sheriar - The Real Deal",
+      "award": "Third Slammer GW22",
+      "detail": "54 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Anish Shah",
+      "team": "Mould Trafford",
+      "manager_team": "Anish Shah - Mould Trafford",
+      "award": "Third Slammer GW22",
+      "detail": "54 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rohan Satelkar",
+      "team": "GLADIATORS",
+      "manager_team": "Rohan Satelkar - GLADIATORS",
+      "award": "Gameweek Slammer GW23",
+      "detail": "76 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Manu Nigam",
+      "team": "21 Guns",
+      "manager_team": "Manu Nigam - 21 Guns",
+      "award": "Second Slammer GW23",
+      "detail": "68 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Jibin Varghese",
+      "team": "FC Kochin",
+      "manager_team": "Jibin Varghese - FC Kochin",
+      "award": "Third Slammer GW23",
+      "detail": "66 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Tyne Torcato",
+      "team": "Auto-Subs & Chill",
+      "manager_team": "Tyne Torcato - Auto-Subs & Chill",
+      "award": "Third Slammer GW23",
+      "detail": "66 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Neeraj Mhatre",
+      "team": "Rice To The Occasion",
+      "manager_team": "Neeraj Mhatre - Rice To The Occasion",
+      "award": "Gameweek Slammer GW24",
+      "detail": "91 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Arghya Brata Mandal",
+      "team": "Arghya's Anteaters A",
+      "manager_team": "Arghya Brata Mandal - Arghya's Anteaters A",
+      "award": "Second Slammer GW24",
+      "detail": "83 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Zubin Sheriar",
+      "team": "The Real Deal",
+      "manager_team": "Zubin Sheriar - The Real Deal",
+      "award": "Third Slammer GW24",
+      "detail": "77 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rishi Deka",
+      "team": "Scalpels&Stitches",
+      "manager_team": "Rishi Deka - Scalpels&Stitches",
+      "award": "Third Slammer GW24",
+      "detail": "77 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Adi tya",
+      "team": "Gyökayo Saka",
+      "manager_team": "Adi tya - Gyökayo Saka",
+      "award": "Gameweek Slammer GW25",
+      "detail": "107 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Manas K",
+      "team": "Gomu Gomu XI",
+      "manager_team": "Manas K - Gomu Gomu XI",
+      "award": "Second Slammer GW25",
+      "detail": "98 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Denver Dmello",
+      "team": "General Tao",
+      "manager_team": "Denver Dmello - General Tao",
+      "award": "Third Slammer GW25",
+      "detail": "93 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "MIHIR SHAH",
+      "team": "Bharat Mata ki Jai",
+      "manager_team": "MIHIR SHAH - Bharat Mata ki Jai",
+      "award": "Gameweek Slammer GW26",
+      "detail": "96 net points",
+      "position": "Joint Winner",
+      "wc": 1450,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Siby Sebastian Mathew",
+      "team": "Wengaboys",
+      "manager_team": "Siby Sebastian Mathew - Wengaboys",
+      "award": "Gameweek Slammer GW26",
+      "detail": "96 net points",
+      "position": "Joint Winner",
+      "wc": 1450,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "SUDEEP MENON",
+      "team": "FC VADA PAV",
+      "manager_team": "SUDEEP MENON - FC VADA PAV",
+      "award": "Third Slammer GW26",
+      "detail": "92 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "SamyaBrata Mandal",
+      "team": "rikitikibobbywobby",
+      "manager_team": "SamyaBrata Mandal - rikitikibobbywobby",
+      "award": "Gameweek Slammer GW27",
+      "detail": "78 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Aravind G",
+      "team": "RED DEVIL",
+      "manager_team": "Aravind G - RED DEVIL",
+      "award": "Second Slammer GW27",
+      "detail": "68 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "ARUN CHERIAN",
+      "team": "Phoenix",
+      "manager_team": "ARUN CHERIAN - Phoenix",
+      "award": "Third Slammer GW27",
+      "detail": "65 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Cyrus Bamji",
+      "team": "cylus11",
+      "manager_team": "Cyrus Bamji - cylus11",
+      "award": "Gameweek Slammer GW28",
+      "detail": "92 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "ashwini singh",
+      "team": "Autopick fc",
+      "manager_team": "ashwini singh - Autopick fc",
+      "award": "Second Slammer GW28",
+      "detail": "91 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Zubin Sheriar",
+      "team": "The Real Deal",
+      "manager_team": "Zubin Sheriar - The Real Deal",
+      "award": "Third Slammer GW28",
+      "detail": "89 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Denver Dmello",
+      "team": "General Tao",
+      "manager_team": "Denver Dmello - General Tao",
+      "award": "Gameweek Slammer GW29",
+      "detail": "91 net points",
+      "position": "Joint Winner",
+      "wc": 1450,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Chirayu Rajput",
+      "team": "13 > Your Whole Club",
+      "manager_team": "Chirayu Rajput - 13 > Your Whole Club",
+      "award": "Gameweek Slammer GW29",
+      "detail": "91 net points",
+      "position": "Joint Winner",
+      "wc": 1450,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Dennis Kurien",
+      "team": "João Can Do It",
+      "manager_team": "Dennis Kurien - João Can Do It",
+      "award": "Third Slammer GW29",
+      "detail": "89 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rahil Mukesh",
+      "team": "Dard-e-Šeško",
+      "manager_team": "Rahil Mukesh - Dard-e-Šeško",
+      "award": "Gameweek Slammer GW30",
+      "detail": "79 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Crystal Vaz",
+      "team": "Cheesy GarNachos!",
+      "manager_team": "Crystal Vaz - Cheesy GarNachos!",
+      "award": "Second Slammer GW30",
+      "detail": "73 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Neeraj Mhatre",
+      "team": "Rice To The Occasion",
+      "manager_team": "Neeraj Mhatre - Rice To The Occasion",
+      "award": "Third Slammer GW30",
+      "detail": "72 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Koshy Jacob",
+      "team": "KoshyKJK",
+      "manager_team": "Koshy Jacob - KoshyKJK",
+      "award": "Third Slammer GW30",
+      "detail": "72 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Siby Sebastian Mathew",
+      "team": "Wengaboys",
+      "manager_team": "Siby Sebastian Mathew - Wengaboys",
+      "award": "Gameweek Slammer GW31",
+      "detail": "92 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Oscar DSouza",
+      "team": "Ozzyboi FC",
+      "manager_team": "Oscar DSouza - Ozzyboi FC",
+      "award": "Second Slammer GW31",
+      "detail": "72 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rohan Satelkar",
+      "team": "GLADIATORS",
+      "manager_team": "Rohan Satelkar - GLADIATORS",
+      "award": "Second Slammer GW31",
+      "detail": "72 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Jibin Varghese",
+      "team": "FC Kochin",
+      "manager_team": "Jibin Varghese - FC Kochin",
+      "award": "Gameweek Slammer GW32",
+      "detail": "80 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Dexter Ferreira",
+      "team": "FPL Bazball",
+      "manager_team": "Dexter Ferreira - FPL Bazball",
+      "award": "Second Slammer GW32",
+      "detail": "77 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Darshan Parab",
+      "team": "TheRedDevils",
+      "manager_team": "Darshan Parab - TheRedDevils",
+      "award": "Third Slammer GW32",
+      "detail": "76 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Cyrus Bamji",
+      "team": "cylus11",
+      "manager_team": "Cyrus Bamji - cylus11",
+      "award": "Gameweek Slammer GW33",
+      "detail": "139 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Prateek Pathare",
+      "team": "Manutd_1690",
+      "manager_team": "Prateek Pathare - Manutd_1690",
+      "award": "Second Slammer GW33",
+      "detail": "136 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "George T Cherian",
+      "team": "Whatsinaname",
+      "manager_team": "George T Cherian - Whatsinaname",
+      "award": "Third Slammer GW33",
+      "detail": "134 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Vikram Gupta",
+      "team": "Let It Rip",
+      "manager_team": "Vikram Gupta - Let It Rip",
+      "award": "Third Slammer GW33",
+      "detail": "134 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Anubhab Dasgupta",
+      "team": "Delapidated",
+      "manager_team": "Anubhab Dasgupta - Delapidated",
+      "award": "Gameweek Slammer GW34",
+      "detail": "74 net points",
+      "position": "Joint Winner",
+      "wc": 1450,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Lukman Masood",
+      "team": "No Havertz Feelings",
+      "manager_team": "Lukman Masood - No Havertz Feelings",
+      "award": "Gameweek Slammer GW34",
+      "detail": "74 net points",
+      "position": "Joint Winner",
+      "wc": 1450,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Rohit Kokane",
+      "team": "RoRedDevils XI",
+      "manager_team": "Rohit Kokane - RoRedDevils XI",
+      "award": "Third Slammer GW34",
+      "detail": "71 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Zubin Sheriar",
+      "team": "The Real Deal",
+      "manager_team": "Zubin Sheriar - The Real Deal",
+      "award": "Gameweek Slammer GW35",
+      "detail": "86 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Lukman Masood",
+      "team": "No Havertz Feelings",
+      "manager_team": "Lukman Masood - No Havertz Feelings",
+      "award": "Second Slammer GW35",
+      "detail": "81 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Adi tya",
+      "team": "Gyökayo Saka",
+      "manager_team": "Adi tya - Gyökayo Saka",
+      "award": "Third Slammer GW35",
+      "detail": "80 net points",
+      "position": "Third",
+      "wc": 700,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Joshua Rego",
+      "team": "Hotdoganymayo",
+      "manager_team": "Joshua Rego - Hotdoganymayo",
+      "award": "Gameweek Slammer GW36",
+      "detail": "103 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Lukman Masood",
+      "team": "No Havertz Feelings",
+      "manager_team": "Lukman Masood - No Havertz Feelings",
+      "award": "Second Slammer GW36",
+      "detail": "102 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Kevin Jose",
+      "team": "StRiKeMaStEr23",
+      "manager_team": "Kevin Jose - StRiKeMaStEr23",
+      "award": "Third Slammer GW36",
+      "detail": "99 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Arnold Clement",
+      "team": "TheMandemFC",
+      "manager_team": "Arnold Clement - TheMandemFC",
+      "award": "Third Slammer GW36",
+      "detail": "99 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "ARUN CHERIAN",
+      "team": "Phoenix",
+      "manager_team": "ARUN CHERIAN - Phoenix",
+      "award": "Gameweek Slammer GW37",
+      "detail": "97 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Manas K",
+      "team": "Gomu Gomu XI",
+      "manager_team": "Manas K - Gomu Gomu XI",
+      "award": "Second Slammer GW37",
+      "detail": "82 net points",
+      "position": "Second",
+      "wc": 1100,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Callum Persaud",
+      "team": "FPLTEST1",
+      "manager_team": "Callum Persaud - FPLTEST1",
+      "award": "Third Slammer GW37",
+      "detail": "80 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Tarun Bhatia",
+      "team": "Change Name",
+      "manager_team": "Tarun Bhatia - Change Name",
+      "award": "Third Slammer GW37",
+      "detail": "80 net points",
+      "position": "Third",
+      "wc": 350,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Ronnie Riet",
+      "team": "FC bal op 't dak",
+      "manager_team": "Ronnie Riet - FC bal op 't dak",
+      "award": "Gameweek Slammer GW38",
+      "detail": "84 net points",
+      "position": "Winner",
+      "wc": 1800,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "shaun prim",
+      "team": "RedFury",
+      "manager_team": "shaun prim - RedFury",
+      "award": "Second Slammer GW38",
+      "detail": "80 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Manu Nigam",
+      "team": "21 Guns",
+      "manager_team": "Manu Nigam - 21 Guns",
+      "award": "Second Slammer GW38",
+      "detail": "80 net points",
+      "position": "Second",
+      "wc": 550,
+      "source": "Gameweek Slammers"
+    },
+    {
+      "manager": "Aahas Cherian John",
+      "team": "What I've Done",
+      "manager_team": "Aahas Cherian John - What I've Done",
+      "award": "Iron Man",
+      "detail": "+34 ranks, GW19 rank 72 to final rank 38",
+      "position": "Winner",
+      "wc": 6000,
+      "source": "Iron Man"
+    },
+    {
+      "manager": "Rohan Satelkar",
+      "team": "GLADIATORS",
+      "manager_team": "Rohan Satelkar - GLADIATORS",
+      "award": "Iron Man",
+      "detail": "+29 ranks, GW19 rank 88 to final rank 59",
+      "position": "Runner-up",
+      "wc": 3000,
+      "source": "Iron Man"
+    },
+    {
+      "manager": "Sai Praneeth",
+      "team": "Power Reijnders",
+      "manager_team": "Sai Praneeth - Power Reijnders",
+      "award": "Third Last Person Standing",
+      "detail": "Eliminated in GW37 with 54 net points",
+      "position": "Third Last",
+      "wc": 3000,
+      "source": "Last Person Standing"
+    },
+    {
+      "manager": "Dane Pereira",
+      "team": "Hotel? Thiago.",
+      "manager_team": "Dane Pereira - Hotel? Thiago.",
+      "award": "Second Last Person Standing",
+      "detail": "Eliminated in GW38 with 60 net points",
+      "position": "Second Last",
+      "wc": 4000,
+      "source": "Last Person Standing"
+    },
+    {
+      "manager": "Vikram Gupta",
+      "team": "Let It Rip",
+      "manager_team": "Vikram Gupta - Let It Rip",
+      "award": "Last Person Standing",
+      "detail": "Final survivor after GW38",
+      "position": "Winner",
+      "wc": 6000,
+      "source": "Last Person Standing"
+    },
+    {
+      "manager": "MIHIR SHAH",
+      "team": "Bharat Mata ki Jai",
+      "manager_team": "MIHIR SHAH - Bharat Mata ki Jai",
+      "award": "Wildcard Wizard",
+      "detail": "GW26 - WC 2, 96 points",
+      "position": "Winner",
+      "wc": 1500,
+      "source": "Wildcard Wizard"
+    },
+    {
+      "manager": "Oscar DSouza",
+      "team": "Ozzyboi FC",
+      "manager_team": "Oscar DSouza - Ozzyboi FC",
+      "award": "Wildcard Wizard",
+      "detail": "GW33 - WC 2, 96 points",
+      "position": "Winner",
+      "wc": 1500,
+      "source": "Wildcard Wizard"
+    },
+    {
+      "manager": "Lukman Masood",
+      "team": "No Havertz Feelings",
+      "manager_team": "Lukman Masood - No Havertz Feelings",
+      "award": "Late Surge",
+      "detail": "366 points from GW34-GW38",
+      "position": "Winner",
+      "wc": 3000,
+      "source": "Late Surge"
+    },
+    {
+      "manager": "Adi tya",
+      "team": "Gyökayo Saka",
+      "manager_team": "Adi tya - Gyökayo Saka",
+      "award": "Everest Award",
+      "detail": "GW25, 107 net points without chips",
+      "position": "Winner",
+      "wc": 3000,
+      "source": "Everest Award"
+    },
+    {
+      "manager": "Jibin Varghese",
+      "team": "FC Kochin",
+      "manager_team": "Jibin Varghese - FC Kochin",
+      "award": "Knockout Cup",
+      "detail": "GW38, 53 points",
+      "position": "Winner",
+      "wc": 6000,
+      "source": "Knockout Cup"
+    },
+    {
+      "manager": "Omejo Alukkal",
+      "team": "Koa FC",
+      "manager_team": "Omejo Alukkal - Koa FC",
+      "award": "Knockout Cup",
+      "detail": "GW38, 52 points",
+      "position": "Runner-up",
+      "wc": 3000,
+      "source": "Knockout Cup"
+    },
+    {
+      "manager": "Rohit Kokane",
+      "team": "RoRedDevils XI",
+      "manager_team": "Rohit Kokane - RoRedDevils XI",
+      "award": "Knockout Cup",
+      "detail": "GW37, 50 points",
+      "position": "Second Runner-up",
+      "wc": 2000,
+      "source": "Knockout Cup"
+    },
+    {
+      "manager": "Amr Sandhu",
+      "team": "SandhuFC",
+      "manager_team": "Amr Sandhu - SandhuFC",
+      "award": "Knockout Cup",
+      "detail": "GW37, 42 points",
+      "position": "Third Runner-up",
+      "wc": 2000,
+      "source": "Knockout Cup"
+    }
+  ]
+}
