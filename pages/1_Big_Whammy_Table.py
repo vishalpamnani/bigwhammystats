@@ -23,6 +23,7 @@ def season_award(rank: int) -> str:
         4: "4th Place",
         5: "Europa 1",
         6: "Europa 2",
+        20: "⚽ #20 - Diogo Jota Tribute Award ❤️",
     }
     return awards.get(rank, "")
 
@@ -44,3 +45,16 @@ df = df.sort_values("Overall Rank").reset_index(drop=True)
 
 # ✅ Display without index
 st.dataframe(df, use_container_width=True, hide_index=True)
+
+tribute_winner = df[df["Overall Rank"] == 20]
+if not tribute_winner.empty:
+    winner = tribute_winner.iloc[0]
+    st.subheader("⚽ Diogo Jota Tribute Award")
+    st.markdown(
+        f"""
+**{winner["Manager"]} — {winner["Team"]}**  
+Final Big Whammy rank: **20** · Overall points: **{winner["Overall Points"]}**
+
+_Forever 20. Gone too soon, never forgotten._ ❤️
+"""
+    )
