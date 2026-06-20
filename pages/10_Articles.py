@@ -50,22 +50,8 @@ if not articles:
     st.info("No published articles yet.")
     st.stop()
 
-featured = [article for article in articles if article.featured]
-regular = [article for article in articles if not article.featured]
-
-if featured:
-    st.subheader("Featured")
-    for article in featured:
-        with st.container(border=True):
-            st.markdown(f"### [{article.title}]({article_url(article.slug)})")
-            st.caption(
-                f"{format_article_date(article)} · {article.author} · {article.category}"
-            )
-            if article.summary:
-                st.write(article.summary)
-
 st.subheader("Latest")
-for article in regular or articles:
+for article in articles:
     with st.container(border=True):
         st.markdown(f"### [{article.title}]({article_url(article.slug)})")
         st.caption(
